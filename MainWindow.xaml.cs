@@ -38,8 +38,7 @@ namespace FlowDiscord
 
         public static void CreateNewMessage(string message)
         {
-            float speed = 10;
-            messages.Add(new FlowMessage(message, 1900, generateRandInt(50, 900), speed));
+            messages.Add(new FlowMessage(message, 3000, generateRandInt(50, 900), 10));
         }
 
         void PaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -56,7 +55,7 @@ namespace FlowDiscord
                 var skPaint = new SKPaint
                 {
                     TextSize = 45,
-                    TextAlign = SKTextAlign.Center,
+                    TextAlign = SKTextAlign.Right,
                     Color = SKColors.White
                 };
 
